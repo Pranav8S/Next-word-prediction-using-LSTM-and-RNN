@@ -1,0 +1,186 @@
+Next Word Prediction ML Web-App
+
+This repository contains the implementation of a cloud-based machine learning (ML) project for Next Word Prediction using Long Short-Term Memory (LSTM) neural networks. The project demonstrates the use of Google Cloud Platform (GCP) services and containerization techniques to deploy the model, along with automation features to streamline deployment.
+
+Table of Contents
+
+Introduction
+
+Features
+
+System Architecture
+
+Technologies Used
+
+Installation
+
+Usage
+
+Results
+
+Challenges
+
+Future Work
+
+Contributors
+
+
+Introduction
+
+The goal of this project is to create a Next Word Prediction system using LSTM neural networks and deploy it using GCP and Docker. The project is a practical demonstration of the application of cloud computing, containerization, and ML model deployment.
+
+Key components of the project include:
+
+Development of the Next Word Prediction model.
+
+Building a user-friendly web interface using Streamlit.
+
+Containerization of the application using Docker.
+
+Cloud deployment using Google Cloud Platform.
+
+
+Features
+
+LSTM-based Next Word Prediction: Predicts the next word in a given sequence using a trained LSTM model.
+
+Streamlit-based Web Interface: Users can interact with the model via a web interface.
+
+Docker Containerization: Ensures consistent deployment across different environments.
+
+Cloud Automation: Automated VM startup, user redirection, and container management.
+
+Cost-effective: Implements VM auto-shutdown to optimize cloud resource usage.
+
+
+System Architecture
+
+The system comprises:
+
+1. GitHub Repository: Hosts the application source code.
+
+
+2. GCP Compute Engine: Provides VM infrastructure for hosting the application.
+
+
+3. Docker: Used to containerize the application.
+
+
+4. GCP Artifact Registry: Stores Docker images.
+
+
+5. GCP Cloud Functions: Handles VM startup and user redirection.
+
+
+6. Cron Job: Automates container deployment on VM boot.
+
+
+7. Streamlit Application: Provides the web interface for Next Word Prediction.
+
+
+
+Technologies Used
+
+Machine Learning: TensorFlow, Keras (LSTM model)
+
+Frontend: Streamlit (Python-based UI framework)
+
+Cloud Platform: Google Cloud Platform (GCP)
+
+Containerization: Docker
+
+Automation: GCP Cloud Functions, Cron Jobs
+
+
+Installation
+
+Prerequisites:
+
+Docker installed
+
+Google Cloud SDK installed
+
+Python 3.x installed
+
+Access to GCP services (GCP Compute Engine, Artifact Registry, Cloud Functions)
+
+
+Steps to run locally:
+
+1. Clone the repository:
+
+git clone https://github.com/your-repository/vcc-ml-project.git
+cd vcc-ml-project
+
+
+2. Build the Docker image:
+
+docker build -t next_word_prediction .
+
+
+3. Run the Docker container:
+
+docker run -p 8501:8501 next_word_prediction
+
+
+4. Open the Streamlit app in your browser:
+
+http://localhost:8501
+
+
+
+Usage
+
+Once the application is running, enter a sequence of words into the input field, and click the "Predict" button. The model will return the most likely next word(s) based on the given sequence.
+
+Results
+
+Accurate predictions using the LSTM model.
+
+Seamless deployment and scaling using GCP services.
+
+Automated application updates and VM management.
+
+Optimized resource usage through automated VM shutdown after inactivity.
+
+
+Challenges
+
+Optimizing the LSTM model for cloud deployment.
+
+Ensuring consistent performance across different cloud environments.
+
+Managing asynchronous VM startup and application initialization.
+
+Implementing robust error handling and timeout mechanisms in the Cloud Function.
+
+
+Future Work
+
+Explore more advanced NLP models like Transformers.
+
+Add more interactive features to the web interface.
+
+Implement multi-cloud deployment strategies.
+
+Improve auto-scaling and monitoring mechanisms.
+
+
+Contributors
+
+Pranav Ashtaputre (G23AI2063)
+
+Sneha Sawla (G23AI2113)
+
+Dhruv Tyagi (G23AI2041)
+
+Gaurav Sharma (G23AI2051)
+
+Shubham Yadav (G23AI2073)
+
+
+Supervisor: Prof. Sumit Kalra
+
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
